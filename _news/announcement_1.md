@@ -15,7 +15,7 @@ We'll be collecting seawater and sediment samples across multiple stations, work
 Read my intro blog @ [SEALS2025_Intro](https://frozenarchives.github.io/blog/2025/seals25/)
 <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 1em;">
       <a href="https://seals2025.com" target="_blank">
-        <img src="/assets/img/seals-logo.png" alt="seals-logo" style="width: 720px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); border-radius: 8px;">
+        <img src="/assets/img/seals-logo.png" alt="seals-logo" style="width: 480px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); border-radius: 8px;">
       </a>
 </div>
 ---
