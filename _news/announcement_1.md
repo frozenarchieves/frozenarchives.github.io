@@ -14,10 +14,10 @@ We'll be collecting seawater and sediment samples across multiple stations, work
 ---
 
 🧭 Follow the journey and learn more at: [seals2025.com](https://seals2025.com)
-Read my intro blog @ [SEALS2025_Intro](/Users/pranaykt/OneDrive - University of Delaware - o365/Documents/GitHub/frozenarchives.github.io/_posts/2025-05-21-seals25.md)
+Read my intro blog @ [SEALS2025_Intro](https://frozenarchives.github.io/blog/2025/seals25/)
 <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 1em;">
       <a href="https://seals2025.com" target="_blank">
-        <img src="/assets/img/seals-logo.png" alt="seals-logo" style="width: 120px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); border-radius: 8px;">
+        <img src="/assets/img/seals-logo.png" alt="seals-logo" style="width: 240px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); border-radius: 8px;">
       </a>
 </div>
 ---
