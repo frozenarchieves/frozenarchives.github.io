@@ -50,10 +50,12 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-expedition-alert-heading-to-the-labrador-sea-starting-june-3rd-2025-i-ll-be-embarking-on-a-month-long-research-expedition-aboard-r-v-roger-revelle-for-seals-2025-sediment-exchange-along-labrador-sea-to-investigate-neodymium-and-iron-fluxes-in-the-northwest-atlantic-a-critical-region-for-understanding-deep-ocean-circulation-and-climate-change-we-ll-be-collecting-seawater-and-sediment-samples-across-multiple-stations-working-with-an-amazing-team-to-uncover-what-lies-beneath-the-waves-follow-the-journey-and-learn-more-at-seals2025-com-departure-june-3rd-2025-route-woods-hole-labrador-sea-reykjavik-focus-nd-amp-amp-fe-benthic-fluxes-sediment-pore-water-exchange-️-duration-33-days-7-transit-26-science-days-stay-tuned-for-updates-from-the-field-photos-from-the-ship-and-a-peek-into-life-at-sea",
-          title: '🌊 Expedition Alert: Heading to the Labrador Sea! 🧭 Starting June 3rd, 2025,...',
+            },},{id: "news-",
+          title: '',
           description: "",
-          section: "News",},{
+          section: "News",handler: () => {
+              window.location.href = "/news/seals_announcement_1/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
