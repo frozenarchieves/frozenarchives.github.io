@@ -39,8 +39,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-",
-          title: '',
+            },},{id: "news-expedition-alert-heading-to-the-labrador-sea",
+          title: 'Expedition Alert: Heading to the Labrador Sea!',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_1/";
