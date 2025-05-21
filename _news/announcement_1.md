@@ -25,3 +25,16 @@ Read my intro blog @ [SEALS2025_Intro](https://frozenarchives.github.io/blog/202
 ⏱️ **Duration:** 33 days (7 transit + 26 science days).
 
 Stay tuned for updates from the field, photos from the ship, and a peek into life at sea!
+
+<section class="map-container" style="margin: 2rem 0;">
+  <h2 class="text-center">🚢 Live Position of SEALS2025 team aboard R/V Roger Revelle</h2>
+  <iframe 
+    src="https://www.marinetraffic.com/en/ais/embed/maptype:3/showmenu:false/shownames:true/mmsi:367800100/remember:false" 
+    width="100%" 
+    height="600" 
+    style="border: none; border-radius: 12px;">
+  </iframe>
+  <p class="text-center mt-2" style="font-size: 0.9rem;">
+    Real-time ship tracking provided by <a href="https://www.marinetraffic.com/" target="_blank" rel="noopener">MarineTraffic</a>.
+  </p>
+</section>
