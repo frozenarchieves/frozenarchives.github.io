@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Expedition Alert: Heading to the Labrador Sea!
+title: 🌊 **Expedition Alert: Heading to the Labrador Sea! 🧭**
 date: 2025-05-20 12:45:00-0000
-inline: true
+inline: false
 related_posts: false
 ---
 
@@ -12,9 +12,11 @@ We'll be collecting seawater and sediment samples across multiple stations, work
 
 🧭 Follow the journey and learn more at: [seals2025.com](https://seals2025.com)
 Read my intro blog @ [SEALS2025_Intro](/_posts/2025-05-21-seals25.md)
-
-![SEALS Logo](/assets/img/seals-logo.png)
-
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 1em;">
+      <a href="https://seals2025.com" target="_blank">
+        <img src="/assets/img/seals-logo.png" alt="seals-logo" style="width: 120px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); border-radius: 8px;">
+      </a>
+</div>
 ---
 📅 **Departure:** June 3rd, 2025
 📍 **Route:** Woods Hole → Labrador Sea → Reykjavik  
