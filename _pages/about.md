@@ -27,7 +27,7 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: false
+  enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
@@ -45,6 +45,8 @@ You can usually find me coding in Python (mostly in Jupyter Lab), working with d
 Outside the lab, I'm always down for food adventures and the occasional dive into a good brewery.
 
 📍 Currently based at [University of Delaware](https://www.udel.edu/academics/colleges/ceoe/departments/es/)
+
+<!--- #Will remove after the expedition
 
   Here are some illustrations related with my current work:
 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 1em;">
@@ -69,7 +71,7 @@ Outside the lab, I'm always down for food adventures and the occasional dive int
   </iframe>
   <p style="font-size: 0.9em; margin-top: 0.5em;">What lies beneath the Antarctic ice sheets ?</p>
 </div>
-
+--->
 <!---
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
