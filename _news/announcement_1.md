@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Expedition Alert: Heading to the Labrador Sea!
-date: 2025-05-21 00:00:00-4000
+date: 2015-11-07 16:11:00-0400
 inline: false
 related_posts: false
 ---
