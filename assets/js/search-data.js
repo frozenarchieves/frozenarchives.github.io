@@ -27,7 +27,7 @@ ninja.data = [{
         
           title: "SEALS 2025 – Off to the Labrador Sea!",
         
-        description: "Our month-long research expedition has begun — investigating sediment exchange and trace metal fluxes across the Labrador Sea.",
+        description: "Our month-long research expedition will begin soon — investigating sediment exchange and trace metal fluxes along the Labrador Sea.",
         section: "Posts",
         handler: () => {
           
