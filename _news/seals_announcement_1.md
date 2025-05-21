@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 🌊 **Expedition Alert: Heading to the Labrador Sea! 🧭**
+title: Expedition Alert: Heading to the Labrador Sea!
 date: 2025-05-20 12:45:00-0000
 inline: true
 related_posts: false
