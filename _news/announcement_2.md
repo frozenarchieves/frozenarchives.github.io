@@ -1,12 +1,12 @@
 ---
 layout: post
-title: dddddA long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: Expedition Alert: Heading to the Labrador Sea!(2)
+date: 2025-05-20 00:00:00-0400
 inline: false
 related_posts: false
 ---
 
-<p> 🌊 **Expedition Alert: Heading to the Labrador Sea! 🧭** </p>
+ 🌊 **Expedition Alert: Heading to the Labrador Sea! 🧭**
 ---
 Starting **June 3rd, 2025**, I'll be embarking on a month-long research expedition aboard R/V Roger Revelle for **SEALS 2025** (*Sediment Exchange Along Labrador Sea*) to investigate neodymium and iron fluxes in the Northwest Atlantic — a critical region for understanding deep ocean circulation and climate change.
 We'll be collecting seawater and sediment samples across multiple stations, working with an amazing team to uncover what lies beneath the waves.
