@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://frozenarchives.github.io/al-folio/sitemap.xml
+Sitemap: https://frozenarchives.github.io/sitemap.xml
