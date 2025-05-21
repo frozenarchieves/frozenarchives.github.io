@@ -43,7 +43,7 @@ ninja.data = [{
           title: '',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/announcement_1_seals/";
+              window.location.href = "/news/announcement_1/";
             },},{
         id: 'social-email',
         title: 'email',
