@@ -31,30 +31,30 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
   
-more_info:
-  Here are some illustrations related with my current work:
-<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 1em;">
-  <div style="text-align: center;">
-    <img src="/assets/img/383_04.png" alt="IODP Expedition 383 Sitemap" width="300" height="200">
-    <p style="margin-top: 0.5em; font-size: 0.9em;">IODP Expedition 383 Sitemap<br>
-    <a href="http://publications.iodp.org/proceedings/383/383title.html">Source</a></p>
-  </div>
-  <div style="text-align: center;">
-    <img src="/assets/img/383_103_F12.png" alt="Examples of IRD (dark spots) in sediment core X-ray images, Hole U1539C" width="300" height="200">
-    <p style="margin-top: 0.5em; font-size: 0.9em;">Examples of IRD (dark spots) in X-ray images of sediment core, Hole U1539C<br>
-    <a href="http://publications.iodp.org/proceedings/383/103/383_103.html">Source</a></p>
-  </div>
-</div>
 
-<div style="margin-top: 2em; text-align: center;">
-  <iframe src="https://player.vimeo.com/video/1036875124" 
-          width="640" height="360" 
-          frameborder="0" 
-          allow="autoplay; fullscreen; picture-in-picture" 
-          allowfullscreen>
-  </iframe>
-  <p style="font-size: 0.9em; margin-top: 0.5em;">What lies beneath the Antarctic ice sheets ?</p>
-</div>
+  Here are some illustrations related with my current work:
+  <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 1em;">
+    <div style="text-align: center;">
+      <img src="/assets/img/383_04.png" alt="IODP Expedition 383 Sitemap" width="300" height="200">
+      <p style="margin-top: 0.5em; font-size: 0.9em;">IODP Expedition 383 Sitemap<br>
+      <a href="http://publications.iodp.org/proceedings/383/383title.html">Source</a></p>
+    </div>
+    <div style="text-align: center;">
+      <img src="/assets/img/383_103_F12.png" alt="Examples of IRD (dark spots) in sediment core X-ray images, Hole U1539C" width="300" height="200">
+      <p style="margin-top: 0.5em; font-size: 0.9em;">Examples of IRD (dark spots) in X-ray images of sediment core, Hole U1539C<br>
+      <a href="http://publications.iodp.org/proceedings/383/103/383_103.html">Source</a></p>
+    </div>
+  </div>
+
+  <div style="margin-top: 2em; text-align: center;">
+    <iframe src="https://player.vimeo.com/video/1036875124" 
+            width="640" height="360" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+    <p style="font-size: 0.9em; margin-top: 0.5em;">What lies beneath the Antarctic ice sheets ?</p>
+  </div>
 ---
 👋 Hey there! I'm a PhD candidate studying the dynamics of the Antarctic Ice Sheets over the past 1.4 million years using Ice-Rafted Debris (IRD) from deep-sea sediment cores. I use a combination of machine learning, radiogenic isotopic analysis, and iceberg trajectory modeling to understand past Antarctic ice-sheet behavior.
 
