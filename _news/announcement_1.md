@@ -28,12 +28,14 @@ Stay tuned for updates from the field, photos from the ship, and a peek into lif
 
 <section class="map-container" style="margin: 2rem 0;">
   <h2 class="text-center">🚢 Live Position of SEALS2025 team aboard R/V Roger Revelle</h2>
+  <div align="center">
   <iframe 
     src="https://www.marinetraffic.com/en/ais/embed/maptype:3/showmenu:false/shownames:true/mmsi:367800100/remember:false/zoom:14" 
     width="70%" 
     height="400" 
     style="border: none; border-radius: 12px;">
   </iframe>
+  </div>
   <p class="text-center mt-2" style="font-size: 0.9rem;">
     Real-time ship tracking provided by <a href="https://www.marinetraffic.com/" target="_blank" rel="noopener">MarineTraffic</a>.
   </p>
