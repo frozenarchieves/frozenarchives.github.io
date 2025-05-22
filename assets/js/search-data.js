@@ -23,24 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-seals-2025-off-to-the-labrador-sea",
-        
-          title: "SEALS 2025 – Off to the Labrador Sea!",
-        
-        description: "Our month-long research expedition will begin soon — investigating sediment exchange and trace metal fluxes along the Labrador Sea.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/seals25/";
-          
-        },
-      },{id: "books-the-godfather",
+        },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
             },},{id: "news-expedition-alert-heading-to-the-labrador-sea",
-          title: 'Expedition Alert: Heading to the Labrador Sea!',
+          title: '🌊 Expedition Alert: Heading to the Labrador Sea!',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_1/";
