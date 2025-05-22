@@ -31,9 +31,13 @@ Stay tuned for updates from the field, photos from the ship, and a peek into lif
   <iframe 
     src="https://www.marinetraffic.com/en/ais/embed/maptype:3/showmenu:false/shownames:true/mmsi:367800100/remember:false/zoom:14" 
     width="70%" 
+    height="400" 
     style="border: none; border-radius: 12px;">
   </iframe>
   <p class="text-center mt-2" style="font-size: 0.9rem;">
     Real-time ship tracking provided by <a href="https://www.marinetraffic.com/" target="_blank" rel="noopener">MarineTraffic</a>.
   </p>
 </section>
+
+
+
