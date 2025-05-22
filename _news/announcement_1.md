@@ -31,7 +31,7 @@ Stay tuned for updates from the field, photos from the ship, and a peek into lif
   <div align="center">
   <iframe 
     src="https://www.marinetraffic.com/en/ais/embed/maptype:3/showmenu:false/shownames:true/mmsi:367800100/remember:false/zoom:14" 
-    width="70%" 
+    width="85%" 
     height="400" 
     style="border: none; border-radius: 12px;">
   </iframe>
