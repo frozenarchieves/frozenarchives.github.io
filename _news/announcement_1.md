@@ -12,7 +12,7 @@ We'll be collecting seawater and sediment samples across multiple stations, work
 ---
 
 🧭 Follow the journey and learn more at: [seals2025.com](https://seals2025.com)
-# Read my intro blog @ [SEALS2025_Intro](https://frozenarchives.github.io/blog/2025/seals25/)
+<!-- Read my intro blog @ [SEALS2025_Intro](https://frozenarchives.github.io/blog/2025/seals25/) -->
 <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 1em;">
       <a href="https://seals2025.com" target="_blank">
         <img src="/assets/img/seals-logo.png" alt="seals-logo" style="width: 480px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); border-radius: 8px;">
@@ -30,8 +30,7 @@ Stay tuned for updates from the field, photos from the ship, and a peek into lif
   <h2 class="text-center">🚢 Live Position of SEALS2025 team aboard R/V Roger Revelle</h2>
   <iframe 
     src="https://www.marinetraffic.com/en/ais/embed/maptype:3/showmenu:false/shownames:true/mmsi:367800100/remember:false/zoom:14" 
-    width="100%" 
-    height="600" 
+    width="70%" 
     style="border: none; border-radius: 12px;">
   </iframe>
   <p class="text-center mt-2" style="font-size: 0.9rem;">
