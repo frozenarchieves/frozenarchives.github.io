@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "books-the-godfather",
+        },{id: "post-seals-2025-off-to-the-labrador-sea",
+        
+          title: "SEALS 2025 – Off to the Labrador Sea!",
+        
+        description: "Our month-long research expedition will begin soon — investigating sediment exchange and trace metal fluxes along the Labrador Sea.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/seals25/";
+          
+        },
+      },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
