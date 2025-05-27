@@ -49,6 +49,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
+            },},{id: "news-2-map-test-expedition-alert-heading-to-the-labrador-sea",
+          title: '2 Map Test 🌊 Expedition Alert: Heading to the Labrador Sea!',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_3/";
             },},{
         id: 'social-email',
         title: 'email',
