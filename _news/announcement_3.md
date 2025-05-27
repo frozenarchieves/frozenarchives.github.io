@@ -101,66 +101,6 @@ map: true
     };
   });
 
-  let geoLayer;
-
-  function renderLayer(typesToShow) {
-    if (geoLayer) geoLayer.remove();
-
-    geoLayer = L.geoJSON({ type: "FeatureCollection", features }, {
-      filter: f => typesToShow.includes(f.properties.Station_Type),
-      pointToLayer: function (feature, latlng) {
-        const type = feature.properties.Station_Type;
-        return L.marker(latlng, { icon: iconMap[type] || iconMap["Unknown Type"] });
-      },
-      onEachFeature: function (feature, layer) {
-        const name = feature.properties.Name;
-        const type = feature.properties.Station_Type;
-        const coords = feature.properties.Coordinates;
-        layer.bindPopup(`<strong>${name}</strong><br>${type}`);
-
-        const btn = document.createElement('button');
-        btn.textContent = name;
-        btn.style.margin = '0.25rem';
-        btn.onclick = () => {
-          map.setView([coords[1], coords[0]], 7);
-          layer.openPopup();
-        };
-        document.getElementById('buttons').appendChild(btn);
-      }
-    }).addTo(map);
-
-    const fullTrack = features
-      .filter(f => typesToShow.includes(f.properties.Station_Type))
-      .map(f => [f.properties.Coordinates[1], f.properties.Coordinates[0]]);
-
-    if (fullTrack.length > 1) {
-      L.polyline(fullTrack, { color: 'red', weight: 2, opacity: 0.8 }).addTo(map);
-    }
-  }
-
-  const stationTypes = Object.keys(iconMap);
-  const filterControls = document.getElementById('filter-controls');
-  const selectedTypes = new Set(stationTypes);
-
-  stationTypes.forEach(type => {
-    const label = document.createElement('label');
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.checked = true;
-    checkbox.onchange = () => {
-      if (checkbox.checked) selectedTypes.add(type);
-      else selectedTypes.delete(type);
-      document.getElementById('buttons').innerHTML = '';
-      renderLayer([...selectedTypes]);
-    };
-    label.appendChild(checkbox);
-    label.append(` ${type} `);
-    label.style.display = 'block';
-    label.style.margin = '0.25rem 0';
-    filterControls.appendChild(label);
-  });
-
-  renderLayer([...selectedTypes]);
 </script>
 
 <style>
