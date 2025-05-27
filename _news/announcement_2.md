@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Map Test 🌊 Expedition Alert: Heading to the Labrador Sea!"
+title: "1 Map Test 🌊 Expedition Alert: Heading to the Labrador Sea!"
 date: 2025-05-25 16:11:00-0400
 inline: false
 related_posts: false

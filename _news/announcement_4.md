@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "2 Map Test 🌊 Expedition Alert: Heading to the Labrador Sea!"
-date: 2025-05-25 16:13:00-0400
+title: "3 Map Test 🌊 Expedition Alert: Heading to the Labrador Sea!"
+date: 2025-05-25 16:12:00-0400
 inline: false
 related_posts: false
 map: true
 ---
-
 <div id="map" style="height: 600px; margin: 20px 0;"></div>
 <div id="buttons" style="margin-bottom: 1rem;"></div>
 
@@ -44,7 +43,7 @@ map: true
     ];
   }
 
-const rawData = [
+ const rawData = [
     ["Waypoint", "Pick up Yang", "44° 32' 52'' N", "063° 29' 37'' W"],
     ["Sampling Station", "Sta.1", "42° 24' 14'' N", "061° 05' 08'' W"],
     ["Waypoint", "Waypoint - 3", "46° 41' 34'' N", "052° 10' 15'' W"],
