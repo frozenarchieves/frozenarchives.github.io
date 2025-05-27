@@ -47,6 +47,7 @@ Check out our sampling locations in the map below!
 
 
 <!--- Begin GeoJSON -->
+<section class="map-container" style="margin: 2rem 0;">
 ```geojson
 {
   "type": "FeatureCollection",
@@ -1596,3 +1597,4 @@ Check out our sampling locations in the map below!
   ]
 }
 ```
+</section>
