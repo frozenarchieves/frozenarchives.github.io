@@ -1,4 +1,3 @@
-<!-- blog/_posts/2025-05-25-map-test.html -->
 ---
 layout: post
 title: "Map Test 🌊 Expedition Alert: Heading to the Labrador Sea!"
