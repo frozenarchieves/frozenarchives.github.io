@@ -4,6 +4,7 @@ title: "🌊 Expedition Alert: Heading to the Labrador Sea!"
 date: 2025-05-20 16:11:00-0400
 inline: false
 related_posts: false
+map: true
 ---
  🌊 **SEALS to the Labrador Sea! 🧭**
 ---
@@ -42,8 +43,11 @@ Stay tuned for updates from the field, photos from the ship, and a peek into lif
 </section>
 
 
-Check out our sampling locations in the map below!
+Check out our sampling locations in the map below!  
+
+
 <!--- Begin GeoJSON -->
+```geojson
 {
   "type": "FeatureCollection",
   "features": [
@@ -1591,4 +1595,4 @@ Check out our sampling locations in the map below!
     }
   ]
 }
-
+```
