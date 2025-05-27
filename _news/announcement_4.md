@@ -7,6 +7,7 @@ related_posts: false
 map: true
 ---
 <div id="map" style="height: 600px; margin: 20px 0;"></div>
+<div id="filter-controls" style="margin: 1rem 0;"></div>
 <div id="buttons" style="margin-bottom: 1rem;"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -43,7 +44,7 @@ map: true
     ];
   }
 
- const rawData = [
+const rawData = [
     ["Waypoint", "Pick up Yang", "44° 32' 52'' N", "063° 29' 37'' W"],
     ["Sampling Station", "Sta.1", "42° 24' 14'' N", "061° 05' 08'' W"],
     ["Waypoint", "Waypoint - 3", "46° 41' 34'' N", "052° 10' 15'' W"],
@@ -104,45 +105,74 @@ map: true
     };
   });
 
-  const geoLayer = L.geoJSON({ type: "FeatureCollection", features }, {
-    pointToLayer: function (feature, latlng) {
-      const type = feature.properties.Station_Type;
-      const color = stationColors[type] || "gray";
-      return L.circleMarker(latlng, {
-        radius: 8,
-        fillColor: color,
-        color: "#000",
-        weight: 1,
-        opacity: 1,
-        fillOpacity: 0.8
-      });
-    },
-    onEachFeature: function (feature, layer) {
-      const name = feature.properties.Name;
-      const type = feature.properties.Station_Type;
-      const coords = feature.properties.Coordinates;
-      layer.bindPopup(`<strong>${name}</strong><br>${type}`);
+  let geoLayer;
 
-      // Add zoom button
-      const btn = document.createElement('button');
-      btn.textContent = name;
-      btn.style.margin = '0.25rem';
-      btn.onclick = () => {
-        map.setView([coords[1], coords[0]], 7);
-        layer.openPopup();
-      };
-      document.getElementById('buttons').appendChild(btn);
+  function renderLayer(typesToShow) {
+    if (geoLayer) geoLayer.remove();
+
+    geoLayer = L.geoJSON({ type: "FeatureCollection", features }, {
+      filter: f => typesToShow.includes(f.properties.Station_Type),
+      pointToLayer: function (feature, latlng) {
+        const type = feature.properties.Station_Type;
+        const color = stationColors[type] || "gray";
+        return L.circleMarker(latlng, {
+          radius: 8,
+          fillColor: color,
+          color: "#000",
+          weight: 1,
+          opacity: 1,
+          fillOpacity: 0.8
+        });
+      },
+      onEachFeature: function (feature, layer) {
+        const name = feature.properties.Name;
+        const type = feature.properties.Station_Type;
+        const coords = feature.properties.Coordinates;
+        layer.bindPopup(`<strong>${name}</strong><br>${type}`);
+
+        const btn = document.createElement('button');
+        btn.textContent = name;
+        btn.style.margin = '0.25rem';
+        btn.onclick = () => {
+          map.setView([coords[1], coords[0]], 7);
+          layer.openPopup();
+        };
+        document.getElementById('buttons').appendChild(btn);
+      }
+    }).addTo(map);
+
+    // Redraw transect lines
+    const transectCoords = features
+      .filter(f => f.properties.Station_Type === "Transect" && typesToShow.includes("Transect"))
+      .map(f => [f.properties.Coordinates[1], f.properties.Coordinates[0]]);
+
+    if (transectCoords.length > 1) {
+      L.polyline(transectCoords, { color: 'orange', weight: 2, opacity: 0.7 }).addTo(map);
     }
-  }).addTo(map);
-
-  // Draw lines between transect points
-  const transectCoords = features
-    .filter(f => f.properties.Station_Type === "Transect")
-    .map(f => [f.properties.Coordinates[1], f.properties.Coordinates[0]]);
-
-  if (transectCoords.length > 1) {
-    L.polyline(transectCoords, { color: 'orange', weight: 2, opacity: 0.7 }).addTo(map);
   }
+
+  const stationTypes = Object.keys(stationColors);
+  const filterControls = document.getElementById('filter-controls');
+  const selectedTypes = new Set(stationTypes);
+
+  stationTypes.forEach(type => {
+    const label = document.createElement('label');
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = true;
+    checkbox.onchange = () => {
+      if (checkbox.checked) selectedTypes.add(type);
+      else selectedTypes.delete(type);
+      document.getElementById('buttons').innerHTML = '';
+      renderLayer([...selectedTypes]);
+    };
+    label.appendChild(checkbox);
+    label.append(` ${type} `);
+    label.style.marginRight = '1rem';
+    filterControls.appendChild(label);
+  });
+
+  renderLayer([...selectedTypes]);
 </script>
 
 <style>
@@ -159,5 +189,8 @@ map: true
   }
   #buttons button:hover {
     background: #444;
+  }
+  #filter-controls {
+    color: white;
   }
 </style>
