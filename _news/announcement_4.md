@@ -8,14 +8,7 @@ map: true
 ---
 
 <div id="map" style="height: 600px; margin: 20px 0; position: relative;"></div>
-<div style="position: absolute; top: 100px; right: 20px; z-index: 1000;">
-  <details>
-    <summary style="cursor: pointer; padding: 0.5rem; background: white; border-radius: 5px; font-weight: bold;">Stations & Filter</summary>
-    <div id="filter-controls" style="background: white; padding: 1rem; border-radius: 5px;"></div>
-  </details>
-</div>
 <div id="legend" style="position: absolute; bottom: 20px; right: 20px; background: white; padding: 1rem; border-radius: 5px; font-size: 0.9rem; z-index: 1000;"></div>
-<div id="buttons" style="margin-bottom: 1rem;"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -25,8 +18,9 @@ map: true
 <script>
   const map = L.map('map').setView([54.5, -54.5], 4);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '',
+    subdomains: 'abcd',
     maxZoom: 19
   }).addTo(map);
 
@@ -95,64 +89,25 @@ map: true
     };
   });
 
-  let geoLayer;
+  const geoLayer = L.geoJSON({ type: "FeatureCollection", features }, {
+    pointToLayer: (feature, latlng) => L.marker(latlng, { icon: iconMap[feature.properties.Station_Type] }),
+    onEachFeature: function (feature, layer) {
+      const { Name, Station_Type } = feature.properties;
+      layer.bindPopup(`<strong>${Name}</strong><br>${Station_Type}`);
+    }
+  }).addTo(map);
 
-  function renderLayer(typesToShow) {
-    if (geoLayer) geoLayer.remove();
-
-    geoLayer = L.geoJSON({ type: "FeatureCollection", features }, {
-      filter: f => typesToShow.includes(f.properties.Station_Type),
-      pointToLayer: (feature, latlng) => L.marker(latlng, { icon: iconMap[feature.properties.Station_Type] }),
-      onEachFeature: function (feature, layer) {
-        const { Name, Station_Type, Coordinates } = feature.properties;
-        layer.bindPopup(`<strong>${Name}</strong><br>${Station_Type}`);
-      }
-    }).addTo(map);
-
-    const trackLine = features.map(f => [f.properties.Coordinates[1], f.properties.Coordinates[0]]);
-
-    L.polyline(trackLine, { color: 'red', weight: 2, opacity: 0.8 }).addTo(map);
-  }
-
-  const stationTypes = Object.keys(iconMap);
-  const selectedTypes = new Set(stationTypes);
-  const filterControls = document.getElementById('filter-controls');
-
-  stationTypes.forEach(type => {
-    const label = document.createElement('label');
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.checked = true;
-    checkbox.onchange = () => {
-      checkbox.checked ? selectedTypes.add(type) : selectedTypes.delete(type);
-      renderLayer([...selectedTypes]);
-    };
-    label.appendChild(checkbox);
-    label.append(` ${type}`);
-    label.style.display = 'block';
-    filterControls.appendChild(label);
-  });
+  const trackLine = features.map(f => [f.properties.Coordinates[1], f.properties.Coordinates[0]]);
+  L.polyline(trackLine, { color: 'red', weight: 2, opacity: 0.8 }).addTo(map);
 
   const legend = document.getElementById('legend');
+  const stationTypes = Object.keys(iconMap);
   legend.innerHTML = stationTypes.map(type => `<div><i class="fa fa-${iconMap[type].options.icon}" style="color:${iconMap[type].options.markerColor}"></i> ${type}</div>`).join('');
-
-  renderLayer([...selectedTypes]);
 </script>
 
 <style>
   .leaflet-control-attribution {
     display: none !important;
-  }
-  #buttons button {
-    padding: 0.4rem 0.6rem;
-    background: #222;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  #buttons button:hover {
-    background: #444;
   }
 </style>
 
