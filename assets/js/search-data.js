@@ -44,21 +44,6 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_1/";
-            },},{id: "news-1-map-test-expedition-alert-heading-to-the-labrador-sea",
-          title: '1 Map Test 🌊 Expedition Alert: Heading to the Labrador Sea!',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-3-map-test-expedition-alert-heading-to-the-labrador-sea",
-          title: '3 Map Test 🌊 Expedition Alert: Heading to the Labrador Sea!',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_4/";
-            },},{id: "news-2-map-test-expedition-alert-heading-to-the-labrador-sea",
-          title: '2 Map Test 🌊 Expedition Alert: Heading to the Labrador Sea!',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_3/";
             },},{
         id: 'social-email',
         title: 'email',
