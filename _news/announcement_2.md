@@ -8,7 +8,7 @@ map: true
 ---
 
 
-
+<!--Working Map in a container 
 <div id="map" style="height: 600px; margin: 20px 0;"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -94,9 +94,9 @@ map: true
   map.fitBounds(geoLayer.getBounds());
 </script>
 
+-->
 
-
-
+ another beautiful map 
 <div id="map" style="height: 600px; margin: 20px 0;"></div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -203,7 +203,7 @@ map: true
   map.fitBounds(geoLayer.getBounds());
 </script>
 
-
+<!---
 
 
 <div id="map" style="height: 600px; margin: 20px 0;"></div>
@@ -310,7 +310,7 @@ map: true
 
   geoLayer.addTo(map);
 </script>
-
+-->
 <style>
   .leaflet-control-attribution {
     display: none !important;
